@@ -5,25 +5,25 @@ package concrete_package;
  */
 public class SalariedEmployee extends Employee {
 
-    private double salary;
+    private double monthlySalary;
     
-    public SalariedEmployee(String name, double salary) {
+    public SalariedEmployee(String name, double monthlySalary) {
 
 	super(name);
-	this.salary = salary;
+	this.monthlySalary = monthlySalary;
     }
 
-    public SalariedEmployee(String name, String empNum, double salary) {
+    public SalariedEmployee(String name, String empNum, double monthlySalary) {
 
 	super(name, empNum);
-	this.salary = salary;
+	this.monthlySalary = monthlySalary;
     }
 
     public double getSalary() {
-	return salary;
+	return monthlySalary;
     }
 
-    public void setSalary(double salary) {
-	this.salary = salary;
+    public void setSalary(double monthlySalary) {
+	this.monthlySalary = monthlySalary;
     }
 }

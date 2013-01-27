@@ -1,29 +1,23 @@
-package concrete_package;
+package abstract_package;
 
 /**
  * @author Machi
  */
-// super class
-public class Employee {
+public abstract class Employee {
     
     private String name;
     private String empNum;
     private String hireDate;
-    private String position;
 
     public Employee() {
     }
     
      public Employee(String name) {
 	this.name = name;
+     
      }    
     
     public Employee(String name, String hireDate) {
-	this.name = name;
-	this.hireDate = hireDate;
-    }
-    
-     public Employee(String name, String hireDate, String position) {
 	this.name = name;
 	this.hireDate = hireDate;
     }
@@ -51,15 +45,6 @@ public class Employee {
     public void setHireDate(String hireDate) {
 	this.hireDate = hireDate;
     }
-
-    public String getPosition() {
-	return position;
-    }
-
-    public void setPosition(String position) {
-	this.position = position;
-    }
-    
     
     
     

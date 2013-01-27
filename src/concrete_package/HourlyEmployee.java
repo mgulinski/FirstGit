@@ -3,14 +3,54 @@ package concrete_package;
 /**
  * @author Machi
  */
+
 public class HourlyEmployee extends Employee {
     
     private double hourlyRate;
-
-    public HourlyEmployee(double hourlyRate, String name, String hireDate) {
-	
-	super(name, hireDate);
+    private double hoursWorked;
+    
+    // constructors 
+    public HourlyEmployee() {
+    }
+    
+    public HourlyEmployee(String name) {
+	super(name);
+    }  
+    
+    public HourlyEmployee(String name, double hourlyRate) {
+	super(name);
 	this.hourlyRate = hourlyRate;
     }    
-       
+   
+    public HourlyEmployee(String name, String hireDate, double hourlyRate) {
+	super(name, hireDate);
+	this.hourlyRate = hourlyRate;
+    }  
+    
+    
+    // getters and setters
+
+    public double getHourlyRate() {
+	return hourlyRate;
+    }
+
+    public void setHourlyRate(double hourlyRate) {
+	this.hourlyRate = hourlyRate;
+    }
+          
+    public void setHoursWorked(double hoursWorked){
+	this.hoursWorked = hoursWorked;    
+    }
+    
+    public double getHoursWorked() {
+	return hoursWorked;
+    
+    }
+    
+    
+    
+    public double calculatePay() {
+	return hourlyRate * hoursWorked; 
+    
+    }
 }
