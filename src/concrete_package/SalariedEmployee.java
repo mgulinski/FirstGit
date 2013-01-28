@@ -38,7 +38,7 @@ public class SalariedEmployee extends Employee {
     public String toString() {
 	
 	String str = super.toString() 
-		+ "\nAnnual Salary:\t" + annualSalary;
+		+ "\nAnnual Salary:\t" + money.format(annualSalary);
 	return str;
 		 
     }

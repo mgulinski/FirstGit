@@ -10,7 +10,7 @@ public interface Employee {
 //	this.hireDate = hireDate;
 //    }
 
-    public abstract String getName();
+    public String getName();
     
     public void setName(String name);
 

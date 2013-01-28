@@ -1,30 +1,37 @@
 package concrete_package;
 
+import java.text.DecimalFormat;
+
 /**
  * @author Machi
  */
 // super class
 public class Employee {
     
+    DecimalFormat money = new DecimalFormat("$#,##0.00");
+
     private String name;
     private String empNum;
     private String hireDate;
     private String position;
 
-     public Employee(String name) {
+    // constructors
+    public Employee(String name) {
 	this.name = name;
-     }    
-    
+    }
+
     public Employee(String name, String hireDate) {
 	this.name = name;
 	this.hireDate = hireDate;
     }
-    
-     public Employee(String name, String hireDate, String position) {
+
+    public Employee(String name, String hireDate, String position) {
 	this.name = name;
 	this.hireDate = hireDate;
     }
 
+    
+    // getters and setters
     public String getName() {
 	return name;
     }
@@ -56,14 +63,19 @@ public class Employee {
     public void setPosition(String position) {
 	this.position = position;
     }
+
     
-     public String toString() {
-	
-	String str = "\nEmployee name:\t" + name
-		+ "\nID number:\t" + empNum
-		+ "\nDate of Hire:\t" + hireDate
-		+ "\nPosition:\t" + position;
-	
+    // toString method
+    @Override
+    public String toString() {
+	StringBuilder sbr = new StringBuilder();
+
+	sbr.append("\nEmployee name:\t").append(name);
+	sbr.append("\nID number:\t").append(empNum);
+	sbr.append("\nDate of Hire:\t").append(hireDate);
+	sbr.append("\nPosition:\t").append(position);
+
+	String str = "\nEmployee Info\n---------------" + sbr;
 	return str;
-}
+    }
 }
