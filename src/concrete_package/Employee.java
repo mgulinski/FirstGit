@@ -11,9 +11,6 @@ public class Employee {
     private String hireDate;
     private String position;
 
-    public Employee() {
-    }
-    
      public Employee(String name) {
 	this.name = name;
      }    
@@ -60,7 +57,13 @@ public class Employee {
 	this.position = position;
     }
     
-    
-    
-    
+     public String toString() {
+	
+	String str = "\nEmployee name:\t" + name
+		+ "\nID number:\t" + empNum
+		+ "\nDate of Hire:\t" + hireDate
+		+ "\nPosition:\t" + position;
+	
+	return str;
+}
 }

@@ -5,25 +5,41 @@ package concrete_package;
  */
 public class SalariedEmployee extends Employee {
 
-    private double monthlySalary;
-    
-    public SalariedEmployee(String name, double monthlySalary) {
+    private double annualSalary;
 
+    public SalariedEmployee(String name) {
 	super(name);
-	this.monthlySalary = monthlySalary;
     }
 
-    public SalariedEmployee(String name, String empNum, double monthlySalary) {
+    public SalariedEmployee(String name, double annualSalary) {
 
-	super(name, empNum);
-	this.monthlySalary = monthlySalary;
+	super(name);
+	this.annualSalary = annualSalary;
+    }
+
+    public SalariedEmployee(String name, String hireDate, double annualSalary) {
+
+	super(name, hireDate);
+	this.annualSalary = annualSalary;
     }
 
     public double getSalary() {
-	return monthlySalary;
+	return annualSalary;
     }
 
-    public void setSalary(double monthlySalary) {
-	this.monthlySalary = monthlySalary;
+    public void setSalary(double annualSalary) {
+	this.annualSalary = annualSalary;
+    }
+    
+    public double calculateWeeklyPay() {
+	return annualSalary / 52.0; //annual salary divided by 52 weeks in a year
+    }
+    
+    public String toString() {
+	
+	String str = super.toString() 
+		+ "\nAnnual Salary:\t" + annualSalary;
+	return str;
+		 
     }
 }

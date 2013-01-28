@@ -10,11 +10,13 @@ public class HourlyEmployee extends Employee {
     private double hoursWorked;
     
     // constructors 
-    public HourlyEmployee() {
-    }
     
     public HourlyEmployee(String name) {
 	super(name);
+    }  
+    
+     public HourlyEmployee(String name, String hireDate) {
+	super(name, hireDate);
     }  
     
     public HourlyEmployee(String name, double hourlyRate) {
@@ -48,9 +50,23 @@ public class HourlyEmployee extends Employee {
     }
     
     
-    
-    public double calculatePay() {
+    // calculateWeeklyPay
+    public double calculateWeeklyPay() {
 	return hourlyRate * hoursWorked; 
     
+    }
+    // overloading calculateWeeklyPay
+    public double calculateWeeklyPay(double hourlyRate, double hoursWorked) {
+	return hourlyRate * hoursWorked; 
+    }
+   
+    @Override
+    public String toString() {
+	
+	String str = super.toString() 
+		+ "\nHourly Rate:\t" + hourlyRate;
+	
+	return str;
+		 
     }
 }
