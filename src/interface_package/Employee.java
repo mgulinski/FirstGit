@@ -4,24 +4,21 @@ package interface_package;
  * @author Machi
  */
 public interface Employee {
-    
-//    public Employee(String name, String hireDate) {
-//	this.name = name;
-//	this.hireDate = hireDate;
-//    }
 
+// gettters and setters
     public String getName();
-    
-    public void setName(String name);
+    void setName(String name);
 
-    public String getEmpNum();
+    String getEmpNum();
+    void setEmpNum(String empNum);
 
-    public void setEmpNum(String empNum);
-
-    public String getHireDate();
-
-    public void setHireDate(String hireDate);
+    String getHireDate();
+    void setHireDate(String hireDate);
     
+    String getPosition();
+    void setPosition(String position);
     
-    
+// calculate weekly pay method
+    double calculateWeeklyPay();
+       
 }
